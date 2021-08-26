@@ -10,6 +10,6 @@ public class HelloController {
     @GetMapping("/hello")
     public String hello(){
         System.out.println("connect");
-        return "success333";
+        return "success333 + test";
     }
 }
