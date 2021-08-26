@@ -27,7 +27,7 @@ node {
 
      stage('Code Deploy') {
          sh '''docker stop ${CONTAINER_NAME} || true && docker rm ${CONTAINER_NAME} || true'''
-         sh '''docker rmi -f `docker images | awk '$1 ~ /springboot3/ {print $3}'`'''
+         sh '''docker rmi -f `docker images | awk '$1 ~ /springboot4/ {print $3}'`'''
          sh '''docker run -d -p ${PORT}:${PORT} --name ${CONTAINER_NAME} ${REPOSITORY_NAME}/${CONTAINER_NAME}:latest'''
      }
 }
