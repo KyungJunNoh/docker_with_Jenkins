@@ -32,6 +32,6 @@ node {
      }
 
      stage('echo'){
-        sh('sudo /shell/test_echo.sh')
+        sh('/shell/test_echo.sh')
      }
 }
